@@ -3,7 +3,7 @@ This repo contains the Botx ROS files for mapping and navigation. This is a simp
 
 ROS1 Noetic was used in this project
 
-## Image of world mapping:
+## Image of World Mapping:
 
 ![image](https://user-images.githubusercontent.com/57093800/215922483-13195e11-5cf8-4e0b-963b-60a634165ac1.png)
 
@@ -14,7 +14,7 @@ ROS1 Noetic was used in this project
 
 
 
-## Image of navigation after mapping:
+## Image of Navigation After Mapping:
 
 ![navigation](https://user-images.githubusercontent.com/57093800/215922712-6b9bfb0b-21e2-4893-98a1-8dc91c5296ad.png)
 
