@@ -7,6 +7,10 @@ Image of world mapping:
 
 ![image](https://user-images.githubusercontent.com/57093800/215922483-13195e11-5cf8-4e0b-963b-60a634165ac1.png)
 
+Generated PGM Map from GMapping:
+
+![world-map](https://user-images.githubusercontent.com/57093800/215925784-7969846b-0bdd-4a0f-b5c7-d640831171ee.png)
+
 
 Image of navigation after mapping:
 
