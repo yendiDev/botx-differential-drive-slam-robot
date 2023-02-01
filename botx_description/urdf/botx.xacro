@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<robot name="botx" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find botx_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find botx_description)/urdf/botx.trans" />
+<xacro:include filename="$(find botx_description)/urdf/botx.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.003877582830871742 1.6665797136639413e-17 0.05291829347376101" rpy="0 0 0"/>
+    <mass value="2.3138752403503777"/>
+    <inertia ixx="0.007906" iyy="0.008375" izz="0.01477" ixy="0.0" iyz="0.0" ixz="-0.000337"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://botx_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://botx_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin xyz="5.790023100122032e-18 -0.012499999999999997 6.938893903907228e-18" rpy="0 0 0"/>
+    <mass value="0.18260507298990664"/>
+    <inertia ixx="0.000124" iyy="0.000228" izz="0.000124" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.1 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://botx_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.1 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://botx_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin xyz="5.790023100122032e-18 0.012500000000000025 6.938893903907228e-18" rpy="0 0 0"/>
+    <mass value="0.18260507298990664"/>
+    <inertia ixx="0.000124" iyy="0.000228" izz="0.000124" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.1 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://botx_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.1 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://botx_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin xyz="0.0 5.584513020951029e-18 0.012499999999999997" rpy="0 0 0"/>
+    <mass value="0.10789485809488787"/>
+    <inertia ixx="4.1e-05" iyy="4.1e-05" izz="7e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.05 -0.0 -0.11" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://botx_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.05 -0.0 -0.11" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://botx_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rev1" type="continuous">
+  <origin xyz="0.0 -0.1 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev2" type="continuous">
+  <origin xyz="0.0 0.1 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid3" type="fixed">
+  <origin xyz="0.05 0.0 0.11" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+</robot>
