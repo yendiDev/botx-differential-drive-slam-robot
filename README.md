@@ -13,10 +13,10 @@ Image of navigation after mapping:
 ![navigation](https://user-images.githubusercontent.com/57093800/215922712-6b9bfb0b-21e2-4893-98a1-8dc91c5296ad.png)
 
 Video of Mapping:
-![mapping]https://user-images.githubusercontent.com/57093800/215924067-2a812b2d-0cc2-4a66-adde-5d7987a2624e.mp4
+![mapping](https://user-images.githubusercontent.com/57093800/215924067-2a812b2d-0cc2-4a66-adde-5d7987a2624e.mp4)
 
 
 Video of Navigation:
-![navigation-slam]https://user-images.githubusercontent.com/57093800/215923809-009efb63-f369-4f53-aeb7-91625cfe4dde.mp4
+![navigation-slam](https://user-images.githubusercontent.com/57093800/215923809-009efb63-f369-4f53-aeb7-91625cfe4dde.mp4)
 
 If you want to contribute to improving this robot, feel free to submit a PR :)
